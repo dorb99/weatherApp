@@ -1,13 +1,11 @@
-.leftCon {
-  height: min-content;
+.rightCon {
+  background-color: rgb(170, 179, 181);
+  padding: 30px;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 45vw;
-  background-color: rgb(170, 179, 181);
-  padding: 30px;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 20px;
 }
 .dataCon {
   background-color: rgba(61, 119, 152, 0.84);
@@ -18,12 +16,12 @@
   justify-content: center;
   align-items: center;
   width: 80%;
+  height: 90%;
   color: white;
+  flex-wrap: wrap;
 }
 .smallCon {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding: 20px;
+  padding: 10px;
 }
 .locationInfo h2 {
   padding: 0;
@@ -62,7 +60,7 @@
   font-size: 1.3rem;
 }
 .bigTemp {
-  font-size: 3rem;
+  font-size: 5rem;
   padding: 0px;
   margin: 0px;
 }
@@ -77,17 +75,7 @@
 }
 .extraHeader {
   font-weight: 100;
-  color: antiquewhite;
 }
 .extraBottom {
-  font-weight: 400;
-}
-@media screen and (max-width: 768px) {
-  .secondCon {
-    flex-direction: column;
-    max-height: fit-content;
-  }
-  .dataCon {
-    max-height: fit-content;
-  }
+  font-weight: 500;
 }

@@ -13,21 +13,18 @@ body {
   font-style: normal;
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  padding: 0px;
+  align-items: center;
 }
 
 .bigCon {
-  height: min-content;
+  min-height: 95vh;
+  width: fit-content;
   background-color: #acacac6f;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 20px;
+  padding: 20px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 
 /* Media query for screens smaller than 768px */
@@ -35,6 +32,6 @@ body {
   .bigCon {
     padding: 10px;
     flex-direction: column;
-    width: 85vw;
+    width: fit-content;
   }
 }

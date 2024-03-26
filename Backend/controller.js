@@ -1,16 +1,18 @@
 require("dotenv").config({ path: "./.env" });
 const { env } = require("process");
-
+//function to make the date be in required format
 const makingDate = (rawData) => {
   const localtime = new Date(rawData.location.localtime);
   const day = ("0" + localtime.getDate()).slice(-2);
   const month = ("0" + (localtime.getMonth() + 1)).slice(-2);
   const year = localtime.getFullYear();
-  const hours = ("0" + Math.round(localtime.getHours())).slice(-2);
-  const minutes = ("0" + localtime.getMinutes()).slice(-2);
+  const roundedMinutes = Math.floor(localtime.getMinutes() / 10) * 10;
+  const minutes = ("0" + (roundedMinutes < 60 ? roundedMinutes : 0)).slice(-2);
+  const hours = ("0" + (roundedMinutes < 60 ? Math.round(localtime.getHours()) : Math.round(localtime.getHours())+1)).slice(-2);  
   const formattedDate = `${day}/${month}/${year} at ${hours}:${minutes}`;
   return formattedDate;
 };
+//retruning only the wanted data to the frontend
 const gatherUsefulData = (rawData) => {
   const currentDate = makingDate(rawData);
   const data = {
@@ -49,6 +51,7 @@ const gatherUsefulData = (rawData) => {
   return data;
 };
 
+//the backend api function
 exports.fetchData = async (req, res) => {
   const city = req.params.city;
   try {
@@ -63,6 +66,6 @@ exports.fetchData = async (req, res) => {
       return res.status(200).json({ message: "Data fetched", data: data });
     }
   } catch (err) {
-    return res.status(500).send(err);
+    return res.status(500).send({ message: "Data fetched", error: err });
   }
 };

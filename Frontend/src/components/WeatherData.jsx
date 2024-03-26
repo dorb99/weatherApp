@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./weatherData.css";
 
 function WeatherData({ city, currentData, setCurrentData }) {
+  //function to make the backend request
   const getDataAPI = async (city) => {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_SERVER}${city}`);
@@ -21,10 +22,12 @@ function WeatherData({ city, currentData, setCurrentData }) {
       setCurrentData(null);
     }
   };
+  //calling the backend function
   const fetchData = async () => {
     console.log("starting to fetch")
     await getDataAPI(city);
   };
+  //rendering the data every time a city  is entered
   useEffect(() => {
     if (city) {
       fetchData(city);
@@ -34,7 +37,7 @@ function WeatherData({ city, currentData, setCurrentData }) {
   return (
     <>
       {!currentData ? null : (
-        <div className="leftCon">
+        <div className="rightCon">
           <div className="dataCon">
             <div className="locationInfo smallCon">
               <h2>{currentData.city}</h2>

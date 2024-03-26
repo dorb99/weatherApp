@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "./searchSide.css";
+
 function SearchSide({ setCity, currentData, setCurrentData }) {
   const [currentSearch, setCurrentSearch] = useState("");
 
+  //making sure the input is valid
   const authorizeCityName = (cityName) => {
-    const regex = /^[A-Za-z][a-z]*$/;
+    const regex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
     return regex.test(cityName);
   };
 
+  //handling the submit button
   const handleSubmit = (e) => {
     e.preventDefault();
     if (authorizeCityName(currentSearch)) {
@@ -19,7 +22,7 @@ function SearchSide({ setCity, currentData, setCurrentData }) {
 
   return (
     <>
-      <div className="rightCon">
+      <div className="leftCon">
         <div className="icon">
           <img src="fintekIcon.png" style={{ width: "120px" }}></img>
         </div>
@@ -43,11 +46,11 @@ function SearchSide({ setCity, currentData, setCurrentData }) {
         {!currentData ? null : (
           <div className="searchFooter">
             <div className="smallText">
-              latitude {currentData.landitude} <br/>
+              latitude {currentData.landitude} <br />
               longitude {currentData.longitude}
             </div>
             <div className="smallText">
-              accurate to <br/>
+              accurate to <br />
               {currentData.lastUpdated}
             </div>
           </div>

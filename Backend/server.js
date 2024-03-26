@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const controller = require('./controller.js');
+//making sure the server can only be accessed from our client
 const corsOptions = {
   origin: env.CLIENT_API_KEY,
 };
