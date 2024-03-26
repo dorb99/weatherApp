@@ -1,0 +1,105 @@
+.rightCon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.searchCon {
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 60vh
+}
+.icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pHeader {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 1.7rem;
+  max-width: 260px;
+  color: grey;
+}
+.beforeInput {
+  font-size: 0.85rem;
+  color: gray;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 15px;
+  width: 90%;
+}
+.formCon {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  align-items: center;
+  width: 300px;
+}
+.inputCon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputCon input {
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.inputCon button {
+  height: 35px;
+  width: 120px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border: none;
+}
+.inputCon button:hover {
+  background-color: rgb(70, 186, 70);
+}
+.inputCon input:focus {
+  outline: none;
+  border: none;
+}
+.searchFooter {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.smallText{
+  padding: 6px;
+}
+@media screen and (max-width: 768px) {
+  .formCon {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-height: fit-content;
+  }
+  .inputCon button {
+    width: fit-content;
+    position: relative;
+  }
+  .inputCon input {
+    width: 100px;
+  }
+  .pHeader {
+    word-wrap: break-word;
+  }
+}

@@ -1,0 +1,93 @@
+.leftCon {
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 45vw;
+  background-color: rgb(170, 179, 181);
+  padding: 30px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.dataCon {
+  background-color: rgba(61, 119, 152, 0.84);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  color: white;
+}
+.smallCon {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 20px;
+}
+.locationInfo h2 {
+  padding: 0;
+  margin: 0px;
+  font-size: 1.5rem;
+  padding: 0px;
+}
+.locationInfo h3 {
+  padding: 0;
+  margin: 0px;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 0px;
+}
+.locationInfo h4 {
+  padding: 0;
+  margin: 0px;
+  padding: 0px;
+}
+.rowCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.extraCon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+.header {
+  padding: 0;
+  margin: 0px;
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+.bigTemp {
+  font-size: 3rem;
+  padding: 0px;
+  margin: 0px;
+}
+.currentTempCon {
+  padding: 0px;
+}
+.extraDataCon {
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.extraHeader {
+  font-weight: 100;
+  color: antiquewhite;
+}
+.extraBottom {
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .secondCon {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+  .dataCon {
+    max-height: fit-content;
+  }
+}
