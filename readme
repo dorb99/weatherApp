@@ -1,0 +1,17 @@
+This is a simple weather application
+
+To run the project:
+    first terminal:
+cd <your_directory>
+{
+    cd Backend
+    npm install
+    node server.js
+}
+    second terminal:
+cd <your_directory>
+{
+    cd Frontend
+    npm install
+    npm run dev
+}
