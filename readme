@@ -1,17 +1,135 @@
-Weather application, using node.js and react, styling with css
+# WeatherApp
 
-To run the project:
-    first terminal:
-cd <your_directory>
-{
-    cd Backend
-    npm install
-    node server.js
-}
-    second terminal:
-cd <your_directory>
-{
-    cd Frontend
-    npm install
-    npm run dev
-}
+A weather application that allows users to check the current weather and a 5-day forecast for any city. Built using React for the frontend and Node.js for the backend, it provides a seamless user experience with real-time weather data.
+
+## Features
+
+- **Current Weather:** Get real-time weather information for a specific city.
+- **5-Day Forecast:** View weather predictions for the next five days.
+- **Search Functionality:** Users can search for weather data by city name.
+- **Responsive Design:** Works smoothly on both desktop and mobile devices.
+
+## Technologies Used
+
+### Frontend (React)
+- **React** – Component-based UI development.
+- **Axios** – Fetching weather data from the API.
+- **CSS** – Styling for responsive and clean design.
+
+### Backend (Node.js ```bash Express)
+- **Express.js** – Handles API requests.
+- **Axios** – Fetches weather data from an external weather API.
+- **CORS ```bash Dotenv** – Enables secure API requests and environment variable management.
+
+## Installation and Setup
+
+Follow these steps to install and run the project locally:
+
+### 1. Clone the Repository
+```bash  
+git clone https://github.com/dorb99/weatherApp.git  
+cd weatherApp  
+```
+
+### 2. Set Up the Backend
+Navigate to the `Backend` directory, install dependencies, and start the server:  
+```bash  
+cd Backend  
+npm install  
+node server.js  
+```
+
+### 3. Set Up the Frontend
+Open a new terminal, navigate to the `Frontend` directory, install dependencies, and start the development server:  
+```bash  
+cd Frontend  
+npm install  
+npm run dev  
+```  
+The frontend should now be accessible in your browser.
+
+## Usage
+
+- **Search for a City:** Enter the name of a city to view its current weather and forecast.
+- **Navigation:** Switch between current weather and forecast using the interface.
+- **Weather Details:** View temperature, humidity, wind speed, and other relevant weather information.
+
+## API Configuration
+
+The application fetches weather data from an external weather API. To configure it:
+
+1. Create a `.env` file in the `Backend` directory.
+2. Add your API key:  
+```bash  
+WEATHER_API_KEY=your_api_key_here  
+```  
+3. Restart the backend server.
+
+## Deployment
+
+### Backend Deployment
+The backend can be deployed using services like:
+- **Heroku**
+- **Railway**
+- **Render**
+
+To deploy the backend:
+1. **Create an account** on one of the platforms.
+2. **Upload your project** or link it to your GitHub repository.
+3. **Add environment variables** (API keys) in the deployment settings.
+4. **Deploy the backend** and update the frontend to use the deployed API URL.
+
+### Frontend Deployment
+The frontend can be deployed using:
+- **Vercel**
+- **Netlify**
+
+To deploy the frontend:
+1. **Push your project to GitHub**.
+2. **Connect GitHub repository to Vercel/Netlify**.
+3. **Set the backend API URL in the environment variables**.
+4. **Deploy the application**.
+
+## Troubleshooting
+
+### Common Issues ```bash Fixes
+
+#### Backend Not Starting
+- Ensure all dependencies are installed:  
+```bash  
+npm install  
+```  
+- Check that `server.js` is running without errors.
+- Verify the API key is set in `.env`.
+
+#### API Not Responding
+- Ensure the external weather API key is valid.
+- Check network requests in the developer console (`F12` → Network tab).
+- Restart the backend server.
+
+#### Frontend Not Connecting to Backend
+- Make sure the backend is running before starting the frontend.
+- Verify the frontend `.env` file contains the correct backend URL.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (```bash git checkout -b feature/your-feature ```).
+3. Commit your changes (```bash git commit -m 'Add new feature' ```).
+4. Push the branch (```bash git push origin feature/your-feature ```).
+5. Open a Pull Request.
+
+### Contribution Guidelines
+- Keep commits small and focused.
+- Use meaningful commit messages.
+- Follow the coding style used in the project.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+For questions or feedback, open an issue on the [GitHub repository](https://github.com/dorb99/weatherApp).
