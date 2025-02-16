@@ -111,25 +111,6 @@ npm install
 - Make sure the backend is running before starting the frontend.
 - Verify the frontend `.env` file contains the correct backend URL.
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch (```bash git checkout -b feature/your-feature ```).
-3. Commit your changes (```bash git commit -m 'Add new feature' ```).
-4. Push the branch (```bash git push origin feature/your-feature ```).
-5. Open a Pull Request.
-
-### Contribution Guidelines
-- Keep commits small and focused.
-- Use meaningful commit messages.
-- Follow the coding style used in the project.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 For questions or feedback, open an issue on the [GitHub repository](https://github.com/dorb99/weatherApp).
